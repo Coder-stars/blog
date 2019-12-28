@@ -17,7 +17,7 @@ class Article(models.Model):
     Fabulous_count = models.CharField(max_length = 200,default=0 )#点赞量
     not_Fabulous = models.CharField(max_length = 200 ,default=0)#倒彩量
     article_type = models.BooleanField(default=True )#文章类型 私有公开 默认公开
-    article_url = models.CharField(max_length = 200,null=True )#文章分享链接
+    article_url = models.CharField(max_length = 200,null=True,blank=True)#文章分享链接
     # attrs   = JSONField()#其他信息
     user=models.ForeignKey('blog_User.User_info',on_delete=models.CASCADE)
 
