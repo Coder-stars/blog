@@ -9,11 +9,15 @@
 </style>
 {% for con in articles%}
 
-<div class="container" id="atr_info">
+<a class="container"  href="Article/id={{con.article_id}}/">
 <hr style="color: cyan">
     <h4>{{con.article_title}}</h4>
 
-    {{con.article_outline}}</div>
+    {{con.article_outline}}<br>
+    <span>作者：{{con.user}}</span>
+    <span>      日期：{{con.create_time}}</span>
+    <!--<span>作者：{{con.user}}</span>-->
+</a>
 {% endfor %}
 
 {% endblock article   %}

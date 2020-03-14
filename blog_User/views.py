@@ -3,4 +3,5 @@ from django.http import  HttpResponse,HttpResponseNotFound
 # Create your views here.
 
 def index(request):
-    return  HttpResponse('用户首页')
+    return render(request,'login.html')
+    # return  HttpResponse('用户首页')
