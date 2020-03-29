@@ -16,7 +16,7 @@
 <body>
 
 <div id="particles-js">
-    <form action="/user/deal_login" method="post">
+    <form action="/user/deal_login/" method="post">
 		{%csrf_token%}
 		<div class="login">
 			<span class=""></span>
@@ -97,7 +97,7 @@
                 success:function (data) {
                     data = JSON.parse(data);
                     if (data.status==1) {
-                                     //动画效果
+                        //动画效果
                         addClass(document.querySelector(".login"), "active")
                         setTimeout(function(){
                                             addClass(document.querySelector(".sk-rotating-plane"), "active")
@@ -109,12 +109,11 @@
                                             document.querySelector(".login").style.display = "block"
 
                                         },9000)
-                        alert("登录成功");
+                        alert(data.info);
                         window.location = data.url
                                 }
 
                     if (data.status==2){//用户不存在
-                        {#$('.other').text =  data.info#}
                         alert(data.info)
                     }
                                 },

@@ -1,10 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--{% load static  %}-->
 <head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
+  <meta charset="utf-8">
+  <title>注册</title>
+
+  <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+  <meta name="author" content="Vincent Garreau" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
+    <style>
+        #regist{
+            z-index: 1;
+            height: 580px;
+            top: 44%;
+        }
+        #wel{
+            margin-top: 20px;
+        }
+    </style>
+
 </head>
 <body>
-$END$
+
+<div id="particles-js">
+	<form action="/user/deal_register/" method="POST">
+        {% csrf_token %}
+		<div class="login" id="regist">
+			<div class="login-top" id="wel">
+				博客社区欢迎您注册
+			</div>
+            {# 用户名 #}
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="{% static 'image/login/name.png' %}"/></div>
+				<div class="login-center-input">
+					<input type="text" required name="user" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
+					<div class="login-center-input-text">用户名</div>
+				</div>
+            </div>
+			{# 密码 #}
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="{% static 'image/login/password.png' %}"/></div>
+				<div class="login-center-input">
+					<input type="password"  required name="pwd" value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
+					<div class="login-center-input-text">密码</div>
+				</div>
+			</div>
+            {# 确认密码 #}
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="{% static 'image/login/pwd.png' %}"/></div>
+				<div class="login-center-input">
+					<input type="password" required name="a_pwd" value="" placeholder="请确认您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请确认您的密码'"/>
+					<div class="login-center-input-text">确认密码</div>
+				</div>
+			</div>
+            {# 邮箱 #}
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="{% static 'image/login/email.png' %}"/></div>
+				<div class="login-center-input">
+					<input type="email" required name="emai" value="" placeholder="请输入邮箱" onfocus="this.placeholder=''" onblur="this.placeholder='请确认您的邮箱'"/>
+					<div class="login-center-input-text">邮箱</div>
+				</div>
+			</div>
+            {# 电话 #}
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="{% static 'image/login/tel.png' %}"/></div>
+				<div class="login-center-input">
+					<input type="tel" name="tel" value=""  pattern="1[0-9]{10}" placeholder="请输入电话" onfocus="this.placeholder=''" onblur="this.placeholder='请确认您的电话'"/>
+					<div class="login-center-input-text">电话</div>
+				</div>
+			</div>
+             {# 地址 #}
+			<div class="login-center clearfix">
+				<div class="login-center-img"><img src="{% static 'image/login/addr.png' %}"/></div>
+				<div class="login-center-input">
+					<input type="text" name="addr" value="" placeholder="请输入地址" onfocus="this.placeholder=''" onblur="this.placeholder='请确认您的地址'"/>
+					<div class="login-center-input-text">地址</div>
+				</div>
+			</div>
+            <button  class="login-button" type="submit" style="margin-top: 10px;margin-left: 10%" >
+                     注册
+                </button>
+
+		<div class="sk-rotating-plane"></div>
+
+            </div>
+    </form>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script>
+        //对用户名进行判断
+        $("input[name='user']").focusout (function () {
+             user_name = $("input[name='user']").val()
+        if (user_name.length>9){
+            alert("用户名不能超过9位");
+            $("input[name='user']").val('');
+        }
+        if (user_name.startsWith('_')){
+            alert("用户名不能以下滑线开始");
+            $("input[name='user']").val('');
+
+        }
+        if($.isNumeric(user_name)){
+            alert("用户名不能是纯数字");
+            $("input[name='user']").val('');
+
+        }
+        })
+
+        //对两次的密码进行判断
+         $("input[name='a_pwd']").focusout ( function () {
+             {
+            pwd = $("input[name='pwd']").val()
+            a_pwd = $("input[name='a_pwd']").val()
+            if (pwd!=a_pwd){
+            alert("两次密码输入不一致");
+            $("input[name='a_pwd']").val('')
+        }
+         }
+         })
+        //对邮箱进行判断
+        $("input[name='emai']").focusout ( function () {
+             {
+            email = $("input[name='emai']").val()
+                 if(email == ''){
+                   {#alert("请输入您的邮箱");#}
+                   return;
+                }else if(email != "") {
+                  var reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+                  isok= reg.test(email );
+                  if (!isok) {
+                    alert("邮箱格式不正确，请重新输入！");
+                    return false;
+                  }
+                };
+                {#alert("ok 输入正确");#}
+
+         }
+         })
+
+        //对手机号进行验证
+        $("input[name='tel']").focusout(function () {
+            phone = $("input[name='tel']").val()
+            var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0]{1})|(15[0-3]{1})|(15[5-9]{1})|(18[0-9]{1}))+\d{8})$/;
+            var message = '';
+            var flag=false
+            if(phone == ''){
+                message = "手机号码不能为空！";
+               }else if(phone.length !=11){
+                 message = "请输入有效的手机号码！";
+               }else if(!myreg.test(phone)){
+                 message = "请输入有效的手机号码！";
+               }else{
+                   flag = true;
+               }
+            if(!flag){
+              //提示错误效果
+                 //jQuery("#phoneDiv").removeClass().addClass("ui-form-item has-error");
+                 //jQuery("#phoneP").html("");
+                 //jQuery("#phoneP").html("<i class=\"icon-error ui-margin-right10\"> <\/i>"+message);
+                 //jQuery("#phone").focus();
+               }else{
+                    //提示正确效果
+                 //jQuery("#phoneDiv").removeClass().addClass("ui-form-item has-success");
+                 //jQuery("#phoneP").html("");
+                 //jQuery("#phoneP").html("<i class=\"icon-success ui-margin-right10\"> <\/i>该手机号码可用");
+               }
+       return flag;
+        })
+
+
+    </script>
+</div>
+
+<script type="text/javascript">
+	function hasClass(elem, cls) {
+	  cls = cls || '';
+	  if (cls.replace(/\s/g, '').length == 0) return false; //当cls没有参数时，返回false
+	  return new RegExp(' ' + cls + ' ').test(' ' + elem.className + ' ');
+	}
+
+	function addClass(ele, cls) {
+	  if (!hasClass(ele, cls)) {
+	    ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
+	  }
+	}
+
+	function removeClass(ele, cls) {
+	  if (hasClass(ele, cls)) {
+	    var newClass = ' ' + ele.className.replace(/[\t\r\n]/g, '') + ' ';
+	    while (newClass.indexOf(' ' + cls + ' ') >= 0) {
+	      newClass = newClass.replace(' ' + cls + ' ', ' ');
+	    }
+	    ele.className = newClass.replace(/^\s+|\s+$/g, '');
+	  }
+	}
+    document.querySelector(".login-button").onclick = function(){
+
+				$.ajax({
+                    type:'POST',
+                    url:'/user/deal_register/',
+                    data: {
+                            csrfmiddlewaretoken: $("input[name='csrfmiddlewaretoken']").val(),
+                            user:$("input[name='user']").val(),
+                            pwd:$("input[name='pwd']").val(),
+                            a_pwd:$("input[name='a_pwd']").val(),
+                            emai:$("input[name='emai']").val(),
+                            tel:$("input[name='tel']").val(),
+                            addr:$("input[name='addr']").val(),
+                        },
+                    success:function(data)
+                    {
+                          data = JSON.parse(data);
+                          console.log(data)
+                        {#alert("注册成功,自动跳转登录界面.......")#}
+                          if (data.status == 1){
+                              alert(data.info)
+                                addClass(document.querySelector(".login"), "active")
+				                setTimeout(function(){
+					addClass(document.querySelector(".sk-rotating-plane"), "active")
+					document.querySelector(".login").style.display = "none"
+				},800)
+				                setTimeout(function(){
+					removeClass(document.querySelector(".login"), "active")
+					removeClass(document.querySelector(".sk-rotating-plane"), "active")
+					document.querySelector(".login").style.display = "block"
+
+
+				},5000);
+                              window.location = data.url
+                          }
+                          if (data.status == 2){
+                              alert(data.info)
+                              {#alert("用户名存在")#}
+                              window.location = data.url
+                      }
+
+                }})
+
+    }
+
+</script>
+	<!-- scripts -->
+<script src="{% static 'js/particles.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+
 </body>
 </html>
