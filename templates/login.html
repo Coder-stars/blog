@@ -3,7 +3,7 @@
 <!--{% load static  %}-->
 <head>
   <meta charset="utf-8">
-  <title>注册</title>
+  <title>登录</title>
 
   <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
   <meta name="author" content="Vincent Garreau" />
@@ -16,6 +16,8 @@
 <body>
 
 <div id="particles-js">
+    <form action="/user/deal_login" method="post">
+		{%csrf_token%}
 		<div class="login">
 			<span class=""></span>
 			<div class="login-top spical-text">
@@ -24,14 +26,14 @@
 			<div class="login-center clearfix">
 				<div class="login-center-img"><img src="{% static 'image/login/name.png' %}"/></div>
 				<div class="login-center-input">
-					<input type="text" name="username" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
+					<input type="text"  required name="username" value="" placeholder="请输入您的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的用户名'"/>
 					<div class="login-center-input-text">用户名</div>
 				</div>
 			</div>
 			<div class="login-center clearfix">
 				<div class="login-center-img"><img src="{% static 'image/login/password.png' %}"/></div>
 				<div class="login-center-input">
-					<input type="password" name="pwd" value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
+					<input type="password" required name="pwd" value="" placeholder="请输入您的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入您的密码'"/>
 					<div class="login-center-input-text">密码</div>
 					<br><br>
 					<span class=""><a href="/user/register/"  class="registe">注册</a
@@ -40,13 +42,18 @@
 				</div>
 			</div>
 			<div class="login-button">
-				登陆
+                登陆
 			</div>
 
 		</div>
 		<div class="sk-rotating-plane"></div>
-</div>
 
+		</form>
+</div>
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+	<!-- scripts -->
+<script src="{% static 'js/particles.min.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
 <script type="text/javascript">
 	function hasClass(elem, cls) {
 	  cls = cls || '';
@@ -59,7 +66,7 @@
 	    ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
 	  }
 	}
-
+//增加类名函数
 	function removeClass(ele, cls) {
 	  if (hasClass(ele, cls)) {
 	    var newClass = ' ' + ele.className.replace(/[\t\r\n]/g, '') + ' ';
@@ -69,23 +76,59 @@
 	    ele.className = newClass.replace(/^\s+|\s+$/g, '');
 	  }
 	}
-		document.querySelector(".login-button").onclick = function(){
-				addClass(document.querySelector(".login"), "active")
-				setTimeout(function(){
-					addClass(document.querySelector(".sk-rotating-plane"), "active")
-					document.querySelector(".login").style.display = "none"
-				},800)
-				setTimeout(function(){
-					removeClass(document.querySelector(".login"), "active")
-					removeClass(document.querySelector(".sk-rotating-plane"), "active")
-					document.querySelector(".login").style.display = "block"
-					alert("登录成功")
+    document.querySelector(".login-button").onclick = function(){
+        user = document.getElementsByName('username')[0].value;
+        pwd = document.getElementsByName('pwd')[0].value;
+        csrf = document.getElementsByName('csrfmiddlewaretoken')[0].value;
 
-				},5000)
+        if  (user!='' && pwd!=''){
+            data={
+                'user':user,
+                'pwd':pwd,
+                'csrfmiddlewaretoken':csrf,
+
+            }
+            /**发送ajax请求deal_login登录*/
+
+            $.ajax({
+                type : 'POST',
+                url: '/user/deal_login/',
+                data: data,
+                success:function (data) {
+                    data = JSON.parse(data);
+                    if (data.status==1) {
+                                     //动画效果
+                        addClass(document.querySelector(".login"), "active")
+                        setTimeout(function(){
+                                            addClass(document.querySelector(".sk-rotating-plane"), "active")
+                                            document.querySelector(".login").style.display = "none"
+                                        },800)
+                        setTimeout(function(){
+                                            removeClass(document.querySelector(".login"), "active")
+                                            removeClass(document.querySelector(".sk-rotating-plane"), "active")
+                                            document.querySelector(".login").style.display = "block"
+
+                                        },9000)
+                        alert("登录成功");
+                        window.location = data.url
+                                }
+
+                    if (data.status==2){//用户不存在
+                        {#$('.other').text =  data.info#}
+                        alert(data.info)
+                    }
+                                },
+                       })
+
+
+                    }
+        else {
+            alert("用户名或密码不能为空");
+            return 0;
+        }
+
 		}
 </script>
-	<!-- scripts -->
-<script src="{% static 'js/particles.min.js' %}"></script>
-<script src="{% static 'js/app.js' %}"></script>
+
 </body>
 </html>
