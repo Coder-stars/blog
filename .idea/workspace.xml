@@ -2,15 +2,404 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4219438d-c370-45a7-aaf7-30577db8cd53" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog_User/user_decorator.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/be.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/dv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/kb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/kl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/lb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/mn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/my.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/nn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/sy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/te.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/tn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/ur.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/langs/zu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/about.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/anchor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/charmap.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/color_picker.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/editor_template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/editor_template_src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/image.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/colorpicker.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/flash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/iframe.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/pagebreak.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/quicktime.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/realmedia.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/shockwave.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/trans.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/video.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/img/windowsmedia.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/about.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/anchor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/charmap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/color_picker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/image.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/link.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/js/source_editor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ar_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/az_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/be.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/be_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/bg_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/bn_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/br_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/bs_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ca_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ch_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/cn_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/cs_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ct_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/cy_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/da_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/de_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/dv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/dv_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/el_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/en_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/eo_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/es_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/et_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/eu_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/fa_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/fi_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/fr_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/gl_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/gu_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/he_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hi_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hr_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hu_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/hy_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ia_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/id_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/is_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/it_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ja_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ka_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/kb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/kb_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/kk_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/kl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/kl_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/km_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ko_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/lb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/lb_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/lt_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/lv_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/mk_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ml_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/mn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/mn_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ms_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/my.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/my_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/nb_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/nl_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/nn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/nn_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/no_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/pl_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ps_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/pt_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ro_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ru_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sc_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/se_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/si_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sk_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sl_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sq_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sr_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sv_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/sy_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ta_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/te.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/te_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/th_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tn_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tr_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tt_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/tw_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/uk_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ur.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/ur_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/vi_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zh-cn_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zh-tw_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zh_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/langs/zu_dlg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/link.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/shortcuts.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/img/buttons.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/img/items.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/img/menu_arrow.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/img/menu_check.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/img/progress.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/img/tabs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/default/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/highcontrast/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/highcontrast/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/highcontrast/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/dialog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/img/button_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/img/button_bg_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/img/button_bg_silver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/ui_black.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/skins/o2k7/ui_silver.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/advanced/source_editor.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/editor_template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/editor_template_src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/img/icons.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/be.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/bn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/br.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/bs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ct.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/cy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/dv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/eo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/gu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/hy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ia.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ka.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/kb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/kk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/kl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/lb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/mn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/my.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/nn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/no.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ps.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/se.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/si.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/sy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/te.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/tn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/tt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/ur.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/zh-cn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/zh-tw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/langs/zu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/skins/default/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/skins/default/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/skins/o2k7/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/skins/o2k7/img/button_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/themes/simple/skins/o2k7/ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/tiny_mce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/js/tiny_mce_src.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/Article/new_article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Article/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Article/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Article/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Article/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog_User/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_User/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog_User/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog_User/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statics/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/statics/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/statics/image/login/email.png" beforeDir="false" afterPath="$PROJECT_DIR$/statics/image/login/email.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,77 +411,32 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Blog$manage.coverage" NAME="blog Coverage Results" MODIFIED="1584755987113" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog_User/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="46" />
+            <state relative-caret-position="736">
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
-                <element signature="e#1127#1175#0" />
-                <element signature="e#369#465#0" />
-                <element signature="e#1352#2723#0" />
-                <element signature="e#786#950#0" />
-                <element signature="e#1961#2680#0" />
-                <element signature="e#2003#2161#0" />
-                <element signature="e#1225#1384#0" />
+                <element signature="e#1283#1379#0" />
+                <element signature="e#1413#2807#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/register.html">
+        <entry file="file://$PROJECT_DIR$/Article/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="217" column="46" lean-forward="true" selection-start-line="217" selection-start-column="46" selection-end-line="217" selection-end-column="46" />
+            <state relative-caret-position="247">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
               <folding>
-                <element signature="n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#5;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#6;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#button#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="e#3755#4195#0#HTML" />
-                <element signature="e#4276#4528#0#HTML" />
-                <element signature="e#5876#6201#0#HTML" />
-                <element signature="e#6612#6785#0#HTML" />
-                <element signature="e#6816#6931#0#HTML" />
-                <element signature="e#6965#7251#0#HTML" />
-                <element signature="e#7942#8446#0#HTML" />
-                <element signature="e#8324#8462#0#HTML" />
-                <element signature="e#8493#8698#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/blog_User/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
-              <folding>
-                <element signature="e#2087#2260#0#HTML" />
-                <element signature="e#2291#2406#0#HTML" />
-                <element signature="e#2448#2734#0#HTML" />
-                <element signature="e#2477#2731#0#HTML" />
-                <element signature="e#3624#3876#0#HTML" />
-                <element signature="e#3927#4284#0#HTML" />
-                <element signature="e#4455#4584#0#HTML" />
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -108,13 +452,33 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Article/new_article.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="217">
+              <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+              <folding>
+                <element signature="e#676#682#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog_User/user_decorator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="47">
+              <caret line="6" column="26" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blog/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+            <state relative-caret-position="850">
+              <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
               <folding>
-                <element signature="e#1133#1532#0" />
-                <element signature="e#1574#2080#0" />
+                <element signature="e#2890#3286#0" />
               </folding>
             </state>
           </provider>
@@ -151,13 +515,16 @@
         <option value="$PROJECT_DIR$/statics/js/app.js" />
         <option value="$PROJECT_DIR$/blog_User/urls.py" />
         <option value="$PROJECT_DIR$/statics/css/style.css" />
-        <option value="$PROJECT_DIR$/Article/models.py" />
         <option value="$PROJECT_DIR$/Article/urls.py" />
-        <option value="$PROJECT_DIR$/Blog/settings.py" />
-        <option value="$PROJECT_DIR$/Blog/urls.py" />
-        <option value="$PROJECT_DIR$/templates/register.html" />
-        <option value="$PROJECT_DIR$/blog_User/views.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/blog_User/views.py" />
+        <option value="$PROJECT_DIR$/templates/register.html" />
+        <option value="$PROJECT_DIR$/Article/models.py" />
+        <option value="$PROJECT_DIR$/Blog/urls.py" />
+        <option value="$PROJECT_DIR$/Blog/settings.py" />
+        <option value="$PROJECT_DIR$/templates/Article/new_article.html" />
+        <option value="$PROJECT_DIR$/blog_User/user_decorator.py" />
+        <option value="$PROJECT_DIR$/Article/views.py" />
       </list>
     </option>
   </component>
@@ -182,11 +549,16 @@
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="Blog" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="blog_User" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dailyfresh" type="462c0819:PsiDirectoryNode" />
+              <item name="df_order" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -201,10 +573,11 @@
     <property name="last_opened_file_path" value="E:/PythonCodes/django/dailyfresh" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Desktop\毕设code\v1.0\Blog\blog_User" />
       <recent name="F:\Desktop\毕设code\v1.0\Blog\statics\js" />
       <recent name="F:\Desktop\毕设code\v1.0\Blog\statics\image\login" />
     </key>
@@ -287,23 +660,25 @@
       <workItem from="1585227713002" duration="3328000" />
       <workItem from="1585384123603" duration="1119000" />
       <workItem from="1585365661152" duration="602000" />
-      <workItem from="1585366299269" duration="18195000" />
+      <workItem from="1585366299269" duration="18550000" />
+      <workItem from="1585570581421" duration="2796000" />
+      <workItem from="1585744783993" duration="5314000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52768000" />
+    <option name="totallyTimeSpent" value="61233000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.17946646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17946646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3034826" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.18739635" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3034826" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -312,7 +687,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7097844" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28026533" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -322,12 +697,12 @@
       <window_info anchor="right" id="Database" order="5" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17946646" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17946646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3034826" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42620233" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3034826" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -336,7 +711,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.7097844" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27031508" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -361,9 +736,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/换源.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://D:/Python/install/Lib/site-packages/twisted/internet/test/test_endpoints.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -423,18 +795,6 @@
     <entry file="file://$PROJECT_DIR$/statics/js/jquery-3.2.1.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Article/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#264#1323#0" />
-            <element signature="e#1361#1990#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog_User/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -455,33 +815,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/statics/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="112" column="185" selection-start-line="112" selection-start-column="180" selection-end-line="112" selection-end-column="185" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/User/index.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
-          <folding>
-            <element signature="e#1133#1532#0" />
-            <element signature="e#1574#2080#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blog/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://E:/PythonCodes/django/dailyfresh/df_user/views.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -525,66 +860,133 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog_User/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="112" column="185" selection-start-line="112" selection-start-column="180" selection-end-line="112" selection-end-column="185" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/js/tiny_mce_src.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Article/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#1361#1990#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="217" column="46" lean-forward="true" selection-start-line="217" selection-start-column="46" selection-end-line="217" selection-end-column="46" />
-          <folding>
-            <element signature="n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#4;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#5;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#6;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#button#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="e#3755#4195#0#HTML" />
-            <element signature="e#4276#4528#0#HTML" />
-            <element signature="e#5876#6201#0#HTML" />
-            <element signature="e#6612#6785#0#HTML" />
-            <element signature="e#6816#6931#0#HTML" />
-            <element signature="e#6965#7251#0#HTML" />
-            <element signature="e#7942#8446#0#HTML" />
-            <element signature="e#8324#8462#0#HTML" />
-            <element signature="e#8493#8698#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog_User/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-            <element signature="e#1127#1175#0" />
-            <element signature="e#369#465#0" />
-            <element signature="e#1352#2723#0" />
-            <element signature="e#786#950#0" />
-            <element signature="e#1961#2680#0" />
-            <element signature="e#2003#2161#0" />
-            <element signature="e#1225#1384#0" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="157" column="10" selection-start-line="157" selection-start-column="10" selection-end-line="157" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="111" column="40" lean-forward="true" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
+        <state relative-caret-position="-1016">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="50" selection-end-column="15" />
           <folding>
-            <element signature="e#2087#2260#0#HTML" />
-            <element signature="e#2291#2406#0#HTML" />
-            <element signature="e#2448#2734#0#HTML" />
-            <element signature="e#2477#2731#0#HTML" />
-            <element signature="e#3624#3876#0#HTML" />
-            <element signature="e#3927#4284#0#HTML" />
-            <element signature="e#4455#4584#0#HTML" />
+            <element signature="n#script#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/js/tiny_mce.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statics/js/themes/advanced/source_editor.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-270" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/换源.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="44" lean-forward="true" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blog/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="45" column="1" lean-forward="true" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+          <folding>
+            <element signature="e#2890#3286#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Article/new_article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+          <folding>
+            <element signature="e#676#682#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/PythonCodes/django/dailyfresh/df_user/user_decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" lean-forward="true" selection-end-line="14" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/PythonCodes/django/dailyfresh/df_order/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="40" lean-forward="true" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Article/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_User/user_decorator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog_User/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+            <element signature="e#1283#1379#0" />
+            <element signature="e#1413#2807#0" />
           </folding>
         </state>
       </provider>

@@ -22,8 +22,8 @@ def deal_login(request):
                 ret['url'] = '/'
                 ret['status'] = 1
                 # red.set_cookie('user_name',user)
-                # request.session['user_id'] = user_exit[0].id
-                # request.session['user_name'] = user
+                request.session['user_id'] = user_exit[0].user_id
+                request.session['user_name'] = user
                 return HttpResponse(json.dumps(ret))
 
         else:
@@ -70,8 +70,7 @@ def deal_register(request):
                 content = {
                     'info':'用户名已经存在，换个用户名试试呗',
                     'url':'/user/register/',
-                    'status':2,#用户名存在
-                }
+                    'status':2,}#用户名存在
             else:
                 try:
                     User_info.objects.create(**infos)
@@ -80,13 +79,11 @@ def deal_register(request):
                                'url':'/user/login/',
                                'status':1,#注册成功
                                }
-
                     return  HttpResponse(json.dumps(content))
                 except:
                     traceback.print_exc()
                     return HttpResponse(traceback.format_exc())
             return HttpResponse(json.dumps(content))
-
         else:
             return HttpResponse('两次密码不一致')
 

@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 from blog_User.models import User_info
 from datetime import datetime
 from django.utils import timezone
@@ -9,7 +10,7 @@ class Article(models.Model):
     article_id = models.AutoField(primary_key=True)
     article_title = models.CharField(max_length=200)  # 文章标题
     article_outline=models.CharField(max_length=2000)#文章概要
-    article_content = models.TextField()  # 文章正文
+    article_content = HTMLField()  # 文章正文
     article_tag = models.CharField(max_length = 200 ) #python  django 文章类别
     create_time = models.DateTimeField(timezone.now())#创建时间
     update_time = models.DateTimeField(auto_now=True)#更新时间

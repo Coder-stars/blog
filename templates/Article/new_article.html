@@ -1,0 +1,42 @@
+<html>
+<head>
+    {% load static %}
+    <title>新建文章</title>
+   <script src="{% static 'js/tiny_mce.js'%}"></script>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <script>
+     tinyMCE.init({
+       'mode':'textareas',
+       'theme':'advanced',
+       {#'theme':'simple',#}
+        'width':650,
+       'height':400
+    })</script>
+    <style>
+        body{
+            margin-left: 200px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+     <input type="text" class="input-group-lg col-lg-5" placeholder="文章标题"><br><br>
+     <input type="text" class="input-group-lg" placeholder="文章标签    ">
+    文章类型:  &nbsp;<select name="" id="" class="select2-dropdown ">
+    <option value="" class="">公开</option>
+    <option value="">私密</option>
+</select>
+<form action="Article/deal_create/">
+    <label>
+         <textarea name="comment_content">正文写在这里</textarea>
+     </label>
+    <br>
+
+    <br>
+    <input type="submit" value="发布文章" class="btn btn-success right">
+</form>
+    </div>
+
+</body>
+</html>
