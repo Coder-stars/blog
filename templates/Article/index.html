@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-{% load staticfiles  %}
+{% load static  %}
 {% block article  %}
 <style>
     #atr_info {
@@ -16,7 +16,6 @@
     {{con.article_outline}}<br>
     <span>作者：{{con.user}}</span>
     <span>      日期：{{con.create_time}}</span>
-    <!--<span>作者：{{con.user}}</span>-->
 </a>
 {% endfor %}
 

@@ -5,10 +5,10 @@ from django.http import JsonResponse
 from .models import Article,Comment
 from tinymce.models import HTMLField
 from django.db import models
-from blog_User import user_decorator
+from blog_User import user_dectorator
 # Create your views here.
 #首页
-@user_decorator.login
+
 def index(request):
     Artics = Article.objects.all().order_by('-Fabulous_count')#点赞量倒叙排名
     context = {}
@@ -17,13 +17,13 @@ def index(request):
 
 
 #新随笔
-@user_decorator.login
+@user_dectorator.login
 def newArticle(request):
     return render(request,'Article/new_article.html')
 
 
 
 #文章详细界面
-@user_decorator.login
+@user_dectorator.login
 def detailArticle(request,Article_Id):
     return HttpResponse(Article_Id)

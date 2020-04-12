@@ -4,6 +4,7 @@ app_name = 'blog_User'
 urlpatterns =[
     # path('',views.index),
     path('login/',views.index),
+    path('logout/',views.logout),
     path('deal_login/',views.deal_login),
     path('register/',views.register),
     path('deal_register/',views.deal_register),

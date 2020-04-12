@@ -7,7 +7,7 @@ import json
 # Create your views here.
 
 def index(request):
-    return render(request,'login.html')
+    return render(request,'User/login.html')
 
 def deal_login(request):
     if request.method == "POST":
@@ -17,22 +17,20 @@ def deal_login(request):
         user_exit = User_info.objects.filter(user_name=user)
         if user_exit:
             if pwd == user_exit[0].user_pwd:#密码正确
-                # red = HttpResponseRedirect('/')
+                red = HttpResponseRedirect('/')
                 ret['info'] = '登录信息核验通过'
                 ret['url'] = '/'
                 ret['status'] = 1
-                # red.set_cookie('user_name',user)
+                red.set_cookie('user_name',user)
                 request.session['user_id'] = user_exit[0].user_id
                 request.session['user_name'] = user
                 return HttpResponse(json.dumps(ret))
-
         else:
             ret['info'] = '用户名或密码不正确'
             ret['url '] = '/user/login/'
             ret['status'] = 2
-
             return HttpResponse(json.dumps(ret))
-    return render(request, 'login.html')
+    return render(request, 'User/login.html')
 
 
 def logout(request):
@@ -46,7 +44,7 @@ def register(request):
     :param request:
     :return:
     """
-    return render(request,'register.html')
+    return render(request,'User/register.html')
 
 def deal_register(request):
     if request.method == 'POST':
