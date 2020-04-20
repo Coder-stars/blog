@@ -11,9 +11,10 @@
 
 <a class="container"  href="Article/id={{con.article_id}}/">
 <hr style="color: cyan">
-    <h4>{{con.article_title}}</h4>
+    <h4>{{con.article_title|safe}}</h4>
 
-    {{con.article_outline}}<br>
+    {{con.article_content|safe|slice:'100'}}...<br>
+
     <span>作者：{{con.user}}</span>
     <span>      日期：{{con.create_time}}</span>
 </a>

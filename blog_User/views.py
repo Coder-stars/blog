@@ -86,8 +86,6 @@ def deal_register(request):
             return HttpResponse('两次密码不一致')
 
 
-
-
 def get_pwd(requests):
     """
     找回密码

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog_User',
     'Article',
     'tinymce',
+    'mptt',
     # 'haystack',
 ]
 TINYMCE_DEFAULT_CONFIG = {

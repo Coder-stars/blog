@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block  article_info%}
+    <style>
+.left {
+    float: left;
+    margin-left: -40px;
+    margin-top: 100px;
+    border: 1px  ;
+    margin-right: 50px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+}
+    .cont {
+        text-align: center;
+        {#margin-left: 80px;#}
+    }
+    .right {
+        float: right;
+        margin-right: 20px;
+    }
+    </style>
+    <div class="container">
+    {# 文章相关信息 #}
+    <div class="header">
+        <h3>{{ title }}</h3>
+{#        <br>#}
+        <h4><a href="/user/user_name={{ user }}">{{ user }}</a>&nbsp;&nbsp;&nbsp;&nbsp;最后更新与{{ created  }}&nbsp;&nbsp;&nbsp;
+        阅读数：{{ read_count }}
+        </h4>
+    </div>
+    <div class="body">
+        {# 左侧点赞及倒彩 #}
+        <div class="left text-left">
+            <h2><span class="glyphicon glyphicon-thumbs-up" id="zan"></span></h2>
+            点赞数：{{ focus }}<br>
+            <h2><span class="glyphicon glyphicon-thumbs-down" id="not_zan"></span></h2>
+            倒彩数：{{ not_focus }}
+        </div>
+        {# 文章详情内容 #}
+        <div class="cont">
+            {{ cont|safe }}
+        </div>
+        {# 毒鸡汤功能 #}
+        <div class="right"></div>
+    </div>
+    </div>
+<script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script>
+        {# 为多个ajax请求请求添加验证，避免403出现 #}
+     $.ajaxSetup({
+            beforeSend:function (xhr,settings) {
+                xhr.setRequestHeader("X-CSRFtoken",$.cookie("csrftoken"))
+            }
+        });
+     $('#zan').click(function () {
+            {# 实现点赞并实现界面局部刷新 #}
+
+            form_data={
+                'article_id':{{ article_id }},
+                'type':'zan',
+            };
+            $.ajax({
+                    type : 'POST',
+                    url: '/Article/zan_article/',
+                    data: form_data,
+                    success:function (data) {
+                        data = JSON.parse(data)
+                        if(data.status==1){
+                        {#alert("点赞成功");#}
+                            {# todo 只能点一次，再次点击提示已经只能点一次 #}
+                        window.location.reload(true);
+                     }
+                        else {
+                            alert(data.status)
+                        }
+                 },
+                },
+
+            );
+        });
+    $('#not_zan').click(function () {
+            {# 实现倒彩并实现界面局部刷新 #}
+            form_data={
+                'article_id':{{ article_id }},
+                'type':'not_zan',
+            };
+            $.ajax({
+                    type : 'POST',
+                    url: '/Article/not_zan_article/',
+                    data: form_data,
+                    success:function (data) {
+                        data = JSON.parse(data)
+                        if(data.status==1){
+                        {#alert("点赞成功");#}
+                            {# todo 只能点一次，再次点击提示已经只能点一次 #}
+                        window.location.reload(true);
+                     }
+                        else {
+                            alert(data.status)
+                        }
+                 },
+                },
+
+            );
+        });
+    </script>
+{% endblock article_info %}
+<hr>

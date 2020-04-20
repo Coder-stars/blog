@@ -8,8 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" media="screen" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}"/>
-    <link rel="stylesheet" href="{% static 'js/jquery.easyui.min.js' %}">
-    <link rel="stylesheet" href="{% static 'js/jquery.min.js' %} ">
+{#    <link rel="stylesheet" href="{% static 'js/jquery.easyui.min.js' %}">#}
+<script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
     <title>base_page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,7 +64,7 @@
             <a href="#">{{ request.session.user_name  }}</a>
         </em>
 
-                    <a href="user/logout/">退出</a>
+                    <a href="/user/logout/">退出</a>
                 {% else %}
 					<a href="/user/login">登录</a>
 
@@ -76,6 +76,7 @@
 <div id="mytext">
 {%block user%}{% endblock user%}
 {%block article%}{% endblock article%}
+{% block article_info %}{% endblock article_info %}
 </div>
 </div>
 

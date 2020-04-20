@@ -10,10 +10,6 @@
      tinyMCE.init({
        'mode':'textareas',
        'theme':'advanced',
-         language_url : "{% static 'js/languages/zh_CN.js'%}",
-         {#selector: '#wenzhang', //容器，可使用css选择器#}
-        {#language:'zh_CN', //调用放在langs文件夹内的语言包#}
-         {#'plugins': "table,spellchecker,paste,searchreplace",#}
         'width':760,
        'height':400
     })</script>
@@ -131,21 +127,23 @@
 <div class="container">
     <br>
     <div class="wenzhang" id="wenzhang">
-     <input type="text" class=" col-lg-12  " placeholder="请输入文章标题"><br><br>
-    <form action="Article/deal_create/">
-    <label>
+    <form action="/Article/deal_article/" method="post">
+        {% csrf_token %}
+         <input type="text" class=" col-lg-12  " name = 'title' placeholder="请输入文章标题"><br><br>
+
+        <label>
          <textarea name="comment_content" placeholder="正文写在这里 "></textarea>
-     </label>
-    <br>
-         <input type="text" class="input-group-lg col-lg-12  " placeholder="文章标签,多个以逗号分隔">
-    <br>
+         </label>
+        <br>
+         <input type="text" class="input-group-lg col-lg-12  "  name = 'tags' placeholder="文章标签,多个以逗号分隔">
+    <br><br>
  <h4>
      文章类型:
-    &nbsp;&nbsp;&nbsp;&nbsp;<select name="" id="article_type" class="select2-dropdown ">
+    &nbsp;&nbsp;&nbsp;&nbsp;<select name="type" id="article_type" class="select2-dropdown ">
     <option value="open" class="">公开</option>
     <option value="person">私密</option>
 </select></h4>
-    <input type="submit" value="发布文章" class="btn btn-success right" style="float:right;">
+    <input type="submit" value="发布文章" class="btn btn-success" style="float:right;">
 </form>
 </div>
     <div  class="calendar" id="rili">

@@ -2375,7 +2375,7 @@ tinymce.html.Styles = function(settings, schema) {
 
 					if (name && value.length > 0) {
 						// Opera will produce 700 instead of bold in their style values
-						if (name === 'font-weight' && value === '700')
+						if (name === 'fonts-weight' && value === '700')
 							value = 'bold';
 						else if (name === 'color' || name === 'background-color') // Lowercase colors like RED
 							value = value.toLowerCase();		
@@ -2635,7 +2635,7 @@ tinymce.html.Styles = function(settings, schema) {
 				L : 'sub|sup',
 				K : 'J|I',
 				J : 'tt|i|b|u|s|strike',
-				I : 'big|small|font|basefont',
+				I : 'big|small|fonts|basefont',
 				H : 'G|F',
 				G : 'br|span|bdo',
 				F : 'object|applet|img|map|iframe',
@@ -2668,7 +2668,7 @@ tinymce.html.Styles = function(settings, schema) {
 				'strike[E][#|S]' + 
 				'big[E][#|S]' + 
 				'small[E][#|S]' + 
-				'font[A|B|size|color|face][#|S]' + 
+				'fonts[A|B|size|color|face][#|S]' +
 				'basefont[id|size|color|face][]' + 
 				'em[E][#|S]' + 
 				'strong[E][#|S]' + 
@@ -3049,7 +3049,7 @@ tinymce.html.Styles = function(settings, schema) {
 			elements.img.attributesDefault = [{name: 'alt', value: ''}];
 
 			// Remove these if they are empty by default
-			each(split('ol,ul,sub,sup,blockquote,span,font,a,table,tbody,tr,strong,em,b,i'), function(name) {
+			each(split('ol,ul,sub,sup,blockquote,span,fonts,a,table,tbody,tr,strong,em,b,i'), function(name) {
 				if (elements[name]) {
 					elements[name].removeEmpty = true;
 				}
@@ -15292,7 +15292,7 @@ tinymce.create('tinymce.ui.Toolbar:tinymce.ui.Container', {
 			FontSize : function(command, ui, value) {
 				var fontClasses, fontSizes;
 
-				// Convert font size 1-7 to styles
+				// Convert fonts size 1-7 to styles
 				if (value >= 1 && value <= 7) {
 					fontSizes = tinymce.explode(settings.font_size_style_values);
 					fontClasses = tinymce.explode(settings.font_size_classes);
@@ -16602,7 +16602,7 @@ tinymce.ForceBlocks = function(editor) {
 				},
 
 				removeformat : [
-					{selector : 'b,strong,em,i,font,u,strike', remove : 'all', split : true, expand : false, block_expand : true, deep : true},
+					{selector : 'b,strong,em,i,fonts,u,strike', remove : 'all', split : true, expand : false, block_expand : true, deep : true},
 					{selector : 'span', attributes : ['style', 'class'], remove : 'empty', split : true, expand : false, deep : true},
 					{selector : '*', attributes : ['style', 'class'], split : false, expand : false, deep : true}
 				]
@@ -16997,8 +16997,8 @@ tinymce.ForceBlocks = function(editor) {
 						// Remove/merge children
 						each(formatList, function(format) {
 							// Merge all children of similar type will move styles from child to parent
-							// this: <span style="color:red"><b><span style="color:red; font-size:10px">text</span></b></span>
-							// will become: <span style="color:red"><b><span style="font-size:10px">text</span></b></span>
+							// this: <span style="color:red"><b><span style="color:red; fonts-size:10px">text</span></b></span>
+							// will become: <span style="color:red"><b><span style="fonts-size:10px">text</span></b></span>
 							each(dom.select(format.inline, node), function(child) {
 								var parent;
 
@@ -18543,7 +18543,7 @@ tinymce.onAddEditor.add(function(tinymce, ed) {
 		dom = editor.dom;
 
 		if (settings.convert_fonts_to_spans) {
-			tinymce.each(dom.select('font,u,strike', params.node), function(node) {
+			tinymce.each(dom.select('fonts,u,strike', params.node), function(node) {
 				filters[node.nodeName.toLowerCase()](ed.dom, node);
 			});
 		}

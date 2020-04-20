@@ -23,7 +23,7 @@
 
 		// Default preview
 		if (!previewStyles)
-			previewStyles = 'font-family font-size font-weight text-decoration text-transform color background-color';
+			previewStyles = 'fonts-family fonts-size fonts-weight text-decoration text-transform color background-color';
 
 		// Removes any variables since these can't be previewed
 		function removeVars(val) {
@@ -62,7 +62,7 @@
 		dom.setStyles(previewElm, {position: 'absolute', left: -0xFFFF});
 		ed.getBody().appendChild(previewElm);
 
-		// Get parent container font size so we can compute px values out of em/% for older IE:s
+		// Get parent container fonts size so we can compute px values out of em/% for older IE:s
 		parentFontSize = dom.getStyle(ed.getBody(), 'fontSize', true);
 		parentFontSize = /px$/.test(parentFontSize) ? parseInt(parentFontSize, 10) : 0;
 
@@ -79,14 +79,14 @@
 				}
 			}
 
-			// Old IE won't calculate the font size so we need to do that manually
+			// Old IE won't calculate the fonts size so we need to do that manually
 			if (name == 'font-size') {
 				if (/em|%$/.test(value)) {
 					if (parentFontSize === 0) {
 						return;
 					}
 
-					// Convert font size from em/% to px
+					// Convert fonts size from em/% to px
 					value = parseFloat(value, 10) / (/%$/.test(value) ? 100 : 1);
 					value = (value * parentFontSize) + 'px';
 				}
@@ -462,7 +462,7 @@
 
 			if (c) {
 				each(ed.getParam('theme_advanced_fonts', t.settings.theme_advanced_fonts, 'hash'), function(v, k) {
-					c.add(ed.translate(k), v, {style : v.indexOf('dings') == -1 ? 'font-family:' + v : ''});
+					c.add(ed.translate(k), v, {style : v.indexOf('dings') == -1 ? 'fonts-family:' + v : ''});
 				});
 			}
 
@@ -517,7 +517,7 @@
 					if (fz >= 1 && fz <= 7)
 						fz = t.sizes[parseInt(fz) - 1] + 'pt';
 
-					c.add(k, v, {'style' : 'font-size:' + fz, 'class' : 'mceFontSize' + (i++) + (' ' + (v['class'] || ''))});
+					c.add(k, v, {'style' : 'fonts-size:' + fz, 'class' : 'mceFontSize' + (i++) + (' ' + (v['class'] || ''))});
 				});
 			}
 
@@ -1171,7 +1171,7 @@
 				});
 			}
 
-			// Select font size
+			// Select fonts size
 			if (c = cm.get('fontsizeselect')) {
 				// Use computed style
 				if (s.theme_advanced_runtime_fontsize && !fz && !cl)
@@ -1268,7 +1268,7 @@
 
 						case 'font':
 							if (v = DOM.getAttrib(n, 'face'))
-								ti += 'font: ' + v + ' ';
+								ti += 'fonts: ' + v + ' ';
 
 							if (v = DOM.getAttrib(n, 'size'))
 								ti += 'size: ' + v + ' ';
