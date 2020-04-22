@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django_mysql',
     'blog_User',
     'Article',
+    'comment',
     'tinymce',
     'mptt',
     # 'haystack',
@@ -99,6 +100,7 @@ DATABASES = {
         'PORT': '3306',
         'HOST': 'localhost',
         'NAME': 'school',
+        # 'NAME': 'bishe',
         'OPTIONS': {'charset': 'utf8mb4'},
 
     }

@@ -61,7 +61,7 @@ def deal_register(request):
             'user_phone':tel,
             'user_addr':addr,
         }
-        print(userName, pwd, a_pwd, mail, tel, addr)
+        # print(userName, pwd, a_pwd, mail, tel, addr)
         user = User_info.objects.filter(user_name=userName).exists()
         if pwd == a_pwd:
             if user:

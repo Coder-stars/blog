@@ -41,8 +41,52 @@
         {# 文章详情内容 #}
         <div class="cont">
             {{ cont|safe }}
+            <hr style="color: #989FA9">
+{#             评论 #}
+             {% if request.session.user_name%}
+        <div>
+            <form action="{% url 'comment:post_comment' article_id %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="body">
+                        <strong>
+                            我也要发言：
+                        </strong>
+                    </label>
+                    <textarea type="text" class="form-control"  id="body" name="body" rows="2">
+                        </textarea>
+                </div>
+                <!-- 提交按钮 -->
+                <button type="submit" class="btn btn-primary ">发送</button>
+            </form>
         </div>
-        {# 毒鸡汤功能 #}
+        <br>
+    {% else %}
+        <br>
+        <h5 class="row justify-content-center">
+            请<a href="/user/login/">登录</a>后回复
+        </h5>
+        <br>
+    {% endif %}
+        <!-- 显示评论 -->
+    <h4>共有{{ comment_count }}条评论</h4>
+    <div>
+        {% for comment in comments %}
+            <hr>
+            <p>
+                <strong style="color: pink">
+                    {{ comment.user }}
+                </strong> 于
+                <span style="color: green">
+                    {{ comment.created|date:"Y-m-d H:i:s" }}
+                </span> 时说：
+            </p>
+            <pre style="font-family: inherit; font-size: 1em;">
+{{ comment.body }}</pre>
+        {% endfor %}
+    </div>
+        </div>
+{#         毒鸡汤功能 #}
         <div class="right"></div>
     </div>
     </div>

@@ -1,9 +1,10 @@
 from django.db import models
 from tinymce.models import HTMLField
+from django.urls import reverse
 from blog_User.models import User_info
 from datetime import datetime
 from django.utils import timezone
-from mptt.models import MPTTModel,TreeForeignKey
+
 # from django_mysql.models import JSONField#    bug required mysql5.7+
 # Create your models here.
 
@@ -25,6 +26,10 @@ class Article(models.Model):
 
     def __str__(self):
         return self.article_title
+
+        # 获取文章地址
+    def get_absolute_url(self):
+        return reverse('article:article_detail', args=[self.id])
     class Meta:
         ordering = ('-create_time',)#默认返回最新文章
         db_table = 'Article_list'
@@ -33,30 +38,5 @@ class Article(models.Model):
 
 
 
-class Comment(MPTTModel):
-
-    # 新增，mptt树形结构
-    parent = TreeForeignKey(
-        'self',
-        on_delete=models.CASCADE,
-        null=True,
-        blank=True,
-        related_name='children'
-    )
-
-    # 新增，记录二级评论回复给谁, str
-    reply_to = models.ForeignKey(
-        User_info,
-        null=True,
-        blank=True,
-        on_delete=models.CASCADE,
-        related_name='replyers'
-    )
-
-    # 替换 Meta 为 MPTTMeta
-    # class Meta:
-    #     ordering = ('created',)
-    class MPTTMeta:
-        order_insertion_by = ['created']
 
 

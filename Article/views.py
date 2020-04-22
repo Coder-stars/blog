@@ -1,21 +1,21 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse,Http404
 from django.shortcuts import render, redirect
 import json
-from django.http import JsonResponse
-from .models import Article,Comment
+from .models import Article
 from blog_User.models import User_info
-from django.views.decorators.csrf import csrf_exempt
 from tinymce.models import HTMLField
-from django.db import models
+from comment.models import Comment
 from blog_User import user_dectorator
 import traceback
 # Create your views here.
-#首页
 
+
+#首页
 def index(request):
     Artics = Article.objects.all().order_by('-Fabulous_count')#点赞量倒叙排名
     context = {}
+
     context['articles']=Artics
     return  render(request,'Article/index.html',context)
 
@@ -29,7 +29,7 @@ def newArticle(request):
 @user_dectorator.login
 def deal_article(request):
     """
-    新疆文章入库并展示概要
+    新建文章入库并展示概要
     :param request: 文章详情（需要入库的数据）
     :return: 文章入库并文章概要界面
     """
@@ -83,6 +83,11 @@ def detailArticle(request,Id):
     #阅读量加一
     article.read_count = int(context['read_count']) +1
     article.save()
+    # 取出文章评论
+    comments = Comment.objects.filter(article_id=article.article_id)
+    context['comments'] = comments
+    context['comment_count'] = comments.count()
+    print("该文章共有:{} 条评价".format(comments.count()))
     return render(request,'Article/detail_article.html',context)
 
 
@@ -123,7 +128,3 @@ def zan(request):#点赞与倒彩函数
             return HttpResponse(json.dumps(ret))
 
 
-#评论文章
-@user_dectorator.login
-def talk(request):
-    pass
