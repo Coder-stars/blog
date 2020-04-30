@@ -9,4 +9,5 @@ urlpatterns =[
     path('register/',views.register),
     path('deal_register/',views.deal_register),
     path('forgetpwd/',views.get_pwd),
+    path('user-center/',views.index,name='user_center')
 ]

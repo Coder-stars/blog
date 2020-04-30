@@ -1,14 +1,11 @@
-{% extends 'base.html'%}
-{% load static  %}
-{% block article  %}
+{% extends 'base.html' %}
+{% load static %}
+{% block user %}
 
+    <div class="row mt-2">
 
- <div class="row mt-2">
         {% for article in articles %}
             <!-- 文章内容 -->
-
-
-
             <div class="col">
                 <!-- 栏目 -->
                 {% if article.column %}
@@ -52,7 +49,7 @@
                 <!-- 摘要 -->
                 <div>
                     <p style="color: gray;">
-                        {{ article.article_content|slice:'100'|safe }}...
+                        {{ article.article_content|slice:'100'|safe}}...
                     </p>
                 </div>
                 <!-- 注脚 -->
@@ -122,9 +119,4 @@
         </span>
     </div>
 </div>
-
-
-{#{% endfor %}#}
-
-{% endblock article   %}
-
+{% endblock user %}

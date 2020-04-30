@@ -1,13 +1,28 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404
+from django.core.paginator import Paginator
 from django.http import  HttpResponse,HttpResponseNotFound,HttpResponseRedirect
-
+from Article.models import  Article
 from .models import *
 import traceback
 import json
 # Create your views here.
 
 def index(request):
-    return render(request,'User/login.html')
+    user_name = request.session['user_name']
+    user = get_object_or_404(User_info, user_name=user_name)
+    context = {}
+    user_article = Article.objects.filter(user=user)
+    print("该用户下的文章数量:%s"%user_article.count())
+    paginator = Paginator(user_article,2)#分页 每页10篇
+    # paginator = Paginator(Artics, 10)  # 分页 每页10篇
+    page = request.GET.get('page')  # 获取url中的页码
+    try:
+        article_list = paginator.get_page(page)  # 获取对应页码返回
+        context['articles'] = article_list
+
+    except:
+        traceback.print_exc()
+    return render(request,'User/user-center.html',context)
 
 def deal_login(request):
     if request.method == "POST":

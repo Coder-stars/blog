@@ -55,13 +55,13 @@
     <span  class="col2"><a href="/">博客社区</a></span>
     <span  class="col2">
         <input type="text" id="search_cont" placeholder="搜索"/>
-        <button class="btn-info btn-sm">查一下</button>
+        <button class="btn-info btn-sm" id="search">查一下</button>
     </span>
-    <span  class="col2"><a href="Article/new/">新随笔</a></span>
+    <span  class="col2"><a href="/Article/new/">新随笔</a></span>
     <span  class="col2">
         {% if  request.session.user_name|default:'' != '' %}
 					<em>
-            <a href="#">{{ request.session.user_name  }}</a>
+            <a href="/user/user-center/">{{ request.session.user_name  }}</a>
         </em>
 
                     <a href="/user/logout/">退出</a>
@@ -80,7 +80,17 @@
 </div>
 </div>
 
-
+<script>
+    $('#search').click(function () {
+        content = $('#search_cont').val()
+        if(content){
+            {# 拿到搜索内容去后端请求数据 #}
+        }
+        else {
+            alert("搜索内容不能为空")
+        }
+    })
+</script>
 
 <hr>
 <div class="footer" id="footer">

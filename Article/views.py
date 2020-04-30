@@ -5,18 +5,24 @@ import json
 from .models import Article
 from blog_User.models import User_info
 from tinymce.models import HTMLField
+from django.core.paginator import Paginator
 from comment.models import Comment
 from blog_User import user_dectorator
 import traceback
+from comment.forms import CommentForm
 # Create your views here.
 
 
 #首页
 def index(request):
-    Artics = Article.objects.all().order_by('-Fabulous_count')#点赞量倒叙排名
     context = {}
+    Artics = Article.objects.all().order_by('-Fabulous_count')#点赞量倒叙排名
+    # paginator = Paginator(Artics,2)#分页 每页10篇
+    paginator = Paginator(Artics,10)#分页 每页10篇
+    page = request.GET.get('page')#获取url中的页码
+    articles = paginator.get_page(page)#获取对应页码返回
 
-    context['articles']=Artics
+    context['articles'] = articles
     return  render(request,'Article/index.html',context)
 
 
@@ -84,9 +90,11 @@ def detailArticle(request,Id):
     article.read_count = int(context['read_count']) +1
     article.save()
     # 取出文章评论
+    comment_form = CommentForm()
     comments = Comment.objects.filter(article_id=article.article_id)
     context['comments'] = comments
     context['comment_count'] = comments.count()
+    context['comment_form'] = comment_form
     print("该文章共有:{} 条评价".format(comments.count()))
     return render(request,'Article/detail_article.html',context)
 

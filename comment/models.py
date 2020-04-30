@@ -1,12 +1,13 @@
 from django.db import models
 from mptt.models import TreeForeignKey,MPTTModel
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 from Article.models import Article
 from blog_User.models import User_info
 # Create your models here.
 
 # 博文的评论
-class Comment(models.Model):
+class Comment(MPTTModel):
     article = models.ForeignKey(
         Article,
         on_delete=models.CASCADE,
@@ -17,7 +18,8 @@ class Comment(models.Model):
         on_delete=models.CASCADE,
         related_name='comments'
     )
-    body = models.TextField()
+    body = RichTextField()
+    # body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     def __str__(self):
         return self.body[:20]
