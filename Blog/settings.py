@@ -45,20 +45,24 @@ INSTALLED_APPS = [
     'tinymce',
     'mptt',
     'ckeditor',
-    # 'haystack',
+    'haystack',
 ]
 TINYMCE_DEFAULT_CONFIG = {
     'theme': 'advanced',
     'width': 600,
     'height': 400,
 }
-# HAYSTACK_CONNECTIONS = {
-#     'default': {
-#         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-#         'URL': 'http://127.0.0.1:8983/solr',
-#
-#     },
-# }
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'Article.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR,'whoosh_index'),
+
+    },
+}
+# 指定每页显示的结果数量
+HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'  # 索引自动更新
+
 CKEDITOR_CONFIGS = {
     # django-ckeditor默认使用default配置
     'default': {

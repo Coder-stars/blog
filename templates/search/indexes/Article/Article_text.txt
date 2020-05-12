@@ -1,0 +1,3 @@
+{{object.article_title}}
+{{object.article_tag}}
+{{object.article_content}}

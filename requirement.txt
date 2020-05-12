@@ -1,8 +1,13 @@
-Django       2.2
-django-mysql 3.3.0  
-Pillow       6.2.1  
-pip          19.3.1 
-PyMySQL      0.9.3  
-pytz         2019.3 
-setuptools   39.0.1 
-sqlparse     0.3.0  
+Django==2.2
+django-ckeditor==5.9.0
+django-haystack==2.8.1
+django-js-asset==1.2.2
+django-mptt==0.11.0
+django-mysql==3.3.0
+django-tinymce==2.8.0
+jieba==0.42.1
+Pillow==6.2.1
+PyMySQL==0.9.3
+pytz==2019.3
+sqlparse==0.3.0
+Whoosh==2.7.4

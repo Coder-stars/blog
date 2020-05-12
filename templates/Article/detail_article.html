@@ -28,7 +28,7 @@
     <div class="header">
         <h3>{{ title }}</h3>
 {#        <br>#}
-        <h4><a href="/user/user_name={{ user }}">{{ user }}</a>&nbsp;&nbsp;&nbsp;&nbsp;最后更新与{{ created  }}&nbsp;&nbsp;&nbsp;
+        <h4><a href="/user/user-center/{{ user_info }}/">{{ user_info }}</a>&nbsp;&nbsp;&nbsp;&nbsp;最后更新与{{ created  }}&nbsp;&nbsp;&nbsp;
         阅读数：{{ read_count }}
         </h4>
     </div>
@@ -121,7 +121,7 @@
                                     </button>
                                 {% else %}
                                     <a class="btn btn-light btn-sm text-muted"
-                                        href="{% url 'user:login' %}"
+                                        href="/user/login/"
                                     >
                                         回复
                                     </a>

@@ -84,7 +84,8 @@ def detailArticle(request,Id):
     context['focus'] = article.Fabulous_count
     context['not_focus'] = article.not_Fabulous
     context['read_count'] = article.read_count
-    context['user'] = article.user
+    context['user_info'] = article.user
+    print("文章作者%s"%article.user)
     context['article_id'] = article.article_id
     #阅读量加一
     article.read_count = int(context['read_count']) +1

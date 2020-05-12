@@ -54,14 +54,16 @@
 <h5 id="title_right">
     <span  class="col2"><a href="/">博客社区</a></span>
     <span  class="col2">
-        <input type="text" id="search_cont" placeholder="搜索"/>
-        <button class="btn-info btn-sm" id="search">查一下</button>
+{#        <form action="/search/" method="get" target="_blank">#}
+        <input type="text" id="search_cont" placeholder="搜索" name="q"/>
+        <button class="btn-info btn-sm" id="search" type="submit">查一下</button>
+{#        </form>#}
     </span>
     <span  class="col2"><a href="/Article/new/">新随笔</a></span>
     <span  class="col2">
         {% if  request.session.user_name|default:'' != '' %}
 					<em>
-            <a href="/user/user-center/">{{ request.session.user_name  }}</a>
+            <a href="/user/user-center/{{ request.session.user_name  }}/">{{ request.session.user_name  }}</a>
         </em>
 
                     <a href="/user/logout/">退出</a>
@@ -77,6 +79,7 @@
 {%block user%}{% endblock user%}
 {%block article%}{% endblock article%}
 {% block article_info %}{% endblock article_info %}
+{% block search %}{% endblock search %}
 </div>
 </div>
 
@@ -84,10 +87,17 @@
     $('#search').click(function () {
         content = $('#search_cont').val()
         if(content){
-            {# 拿到搜索内容去后端请求数据 #}
+            {#  拿到搜索内容去后端请求数据#}
+            $.ajax({
+                url:'/search/',
+                type:'get',
+
+            }
+
+            )
         }
         else {
-            alert("搜索内容不能为空")
+            alert("搜索内容异常")
         }
     })
 </script>
