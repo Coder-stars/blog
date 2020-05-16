@@ -1,18 +1,16 @@
+
+{% extends 'base.html' %}
 {% load static %}
-<html>
+{% block new_article %}
 <head>
 
     <title>新建文章</title>
-   <script src="{% static 'js/tiny_mce.js'%}"></script>
     <link href="{% static 'css/calendar.css'%}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
         <script src="{% static 'ckeditor/ckeditor/plugins/prism/lib/prism/prism_patched.min.js' %}"></script>
         <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
         <script src="{% static 'ckeditor/config.js' %}"></script>
 
-    <script>
-
-    </script>
     <style>
 
 
@@ -121,7 +119,9 @@
 
     </style>
 </head>
+
 <body>
+
 <div class="container">
     <br>
     <div class="wenzhang" id="wenzhang">
@@ -364,4 +364,4 @@
     })
   </script>
 </body>
-</html>
+{% endblock new_article %}

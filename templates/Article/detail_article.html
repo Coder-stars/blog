@@ -138,11 +138,11 @@
                                  aria-hidden="true"
                             >
                                 <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content" style="width: auto;height: 400px">
+                                    <div class="modal-content" style="width: 800px;height: 500px">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalCenterTitle">回复&nbsp; {{ comment.user }}：</h5>
                                         </div>
-                                        <div class="modal-body" id="modal_body_{{ comment.id }}" style="height: 300px;width: 600px"></div>
+                                        <div class="modal-body" id="modal_body_{{ comment.id }}" style="height: 300px;width: 550px"></div>
                                     </div>
                                 </div>
                             </div>
@@ -243,7 +243,7 @@
                 '/' +
                 comment_id +
                 '"' +
-                ' frameborder="0" style="width: 130%; height: 140%;" id="iframe_' +
+                ' frameborder="0" style="width: 150%; height: 130%;" id="iframe_' +
                 comment_id +
                 '"></iframe>';
             $(modal_body).append(content);

@@ -70,10 +70,11 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'  # 索引
 
 CKEDITOR_CONFIGS = {
     # django-ckeditor默认使用default配置
+    #新建博文富文本配置
     'default': {
         # 编辑器宽度自适应
         'width':'700px',
-        'height':'400px',
+        'height':'300px',
 
         # tab键转换空格数
         'tabSpaces': 4,
