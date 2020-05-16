@@ -70,12 +70,8 @@
                 </div>
                 <br>
     {% else %}
-{#        <br>#}
-{#        <h5 class="row justify-content-center">#}
-{#            请<a href="/user/login/">登录</a>后回复#}
-{#        </h5>#}
+
                  <h5> 请<a href="/user/login/">登录</a>后回复</h5>
-{#        <br>#}
     {% endif %}
         <!-- 显示评论 -->
             {% load mptt_tags %}
@@ -142,11 +138,11 @@
                                  aria-hidden="true"
                             >
                                 <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content" style="height: 380px">
+                                    <div class="modal-content" style="width: auto;height: 400px">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalCenterTitle">回复&nbsp; {{ comment.user }}：</h5>
                                         </div>
-                                        <div class="modal-body" id="modal_body_{{ comment.id }}"></div>
+                                        <div class="modal-body" id="modal_body_{{ comment.id }}" style="height: 300px;width: 600px"></div>
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +169,8 @@
 
     <script>
         {# ckeditor自适应 #}
-     $(".django-ckeditor-widget").removeAttr('style');
+
+     {#$(".django-ckeditor-widget").removeAttr('style');#}
         {# 为多个ajax请求请求添加验证，避免403出现 #}
      $.ajaxSetup({
             beforeSend:function (xhr,settings) {
@@ -246,7 +243,7 @@
                 '/' +
                 comment_id +
                 '"' +
-                ' frameborder="0" style="width: 80%; height: 100%;" id="iframe_' +
+                ' frameborder="0" style="width: 130%; height: 140%;" id="iframe_' +
                 comment_id +
                 '"></iframe>';
             $(modal_body).append(content);
