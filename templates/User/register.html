@@ -96,6 +96,11 @@
             alert("用户名不能超过9位");
             $("input[name='user']").val('');
         }
+        if (user_name.length<6){
+            confirm('用户名不能小于6位');
+            $("input[name='user']").val('');
+
+        }
         if (user_name.startsWith('_')){
             alert("用户名不能以下滑线开始");
             $("input[name='user']").val('');
@@ -108,6 +113,21 @@
         }
         })
 
+        //对密码位数进行判断
+         $("input[name='pwd']").focusout ( function () {
+             {
+            pwd = $("input[name='pwd']").val()
+            if (pwd.length<8){
+                confirm("密码不能小于8位切不能是纯数字");
+                $("input[name='pwd']").focus()
+            }
+            if($.isNumeric(pwd)){
+                confirm("密码不能小于8位切不能是纯数字");
+                $("input[name='pwd']").val('');
+                $("input[name='pwd']").focus();
+            }
+         }
+         });
         //对两次的密码进行判断
          $("input[name='a_pwd']").focusout ( function () {
              {
@@ -197,11 +217,12 @@
                             tel:$("input[name='tel']").val(),
                             addr:$("input[name='addr']").val(),
                         },
+
                     success:function(data)
                     {
                           data = JSON.parse(data);
                           console.log(data)
-                        {#alert("注册成功,自动跳转登录界面.......")#}
+                        alert("注册成功,自动跳转登录界面.......")
                           if (data.status == 1){
                               alert(data.info)
                                 addClass(document.querySelector(".login"), "active")
@@ -220,7 +241,7 @@
                           }
                           if (data.status == 2){
                               alert(data.info)
-                              {#alert("用户名存在")#}
+                              alert("用户名存在")
                               window.location = data.url
                       }
 

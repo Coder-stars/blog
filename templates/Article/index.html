@@ -72,11 +72,11 @@
                         {{ article.create_time|date:'Y-m-d H:m:s' }}
 
 {#                        {{ article.create_time|safe }}#}
-                    </span>
+                    </span>&nbsp;
                     <span>
                         <i class="fas fa-clock" style="color: pink;"></i>
-
-                        作者:{{  request.session.user_name}}
+                        {# 获取博文作者 #}
+                        作者:&nbsp;{{  article.user}}
                     </span>
                 </p>
             </div>

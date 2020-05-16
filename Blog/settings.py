@@ -46,12 +46,14 @@ INSTALLED_APPS = [
     'mptt',
     'ckeditor',
     'haystack',
+    'ckeditor_uploader',
 ]
-TINYMCE_DEFAULT_CONFIG = {
-    'theme': 'advanced',
-    'width': 600,
-    'height': 400,
-}
+
+MEDIA_URL = '/media/'
+# 放在django项目根目录，同时也需要创建media文件夹
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+CKEDITOR_UPLOAD_PATH = 'upload/'
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'Article.whoosh_backend.WhooshEngine',
@@ -59,6 +61,9 @@ HAYSTACK_CONNECTIONS = {
 
     },
 }
+from django.conf import settings
+from django.conf.urls.static import static
+
 # 指定每页显示的结果数量
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 10
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'  # 索引自动更新
@@ -67,12 +72,14 @@ CKEDITOR_CONFIGS = {
     # django-ckeditor默认使用default配置
     'default': {
         # 编辑器宽度自适应
-        'width':'auto',
-        'height':'250px',
+        'width':'700px',
+        'height':'400px',
+
         # tab键转换空格数
         'tabSpaces': 4,
         # 工具栏风格
-        'toolbar': 'Custom',
+        # 'toolbar': 'Custom',
+        'toolbar': 'full',
         # 工具栏按钮
         'toolbar_Custom': [
             # 表情 代码块
@@ -89,8 +96,35 @@ CKEDITOR_CONFIGS = {
             ['Maximize']
         ],
         # 加入代码块插件
-        'extraPlugins': ','.join(['codesnippet','prism','widget','lineutils']),
-    }
+        'extraPlugins': ','.join(['codesnippet','uploadimage','prism','widget','lineutils']),
+    },
+    'comment':{
+# 编辑器宽度自适应
+        'width':'700px',
+        'height':'200px',
+        # tab键转换空格数
+        'tabSpaces': 4,
+        # 工具栏风格
+        'toolbar': 'Custom',
+        # 'toolbar': 'full',
+        # 工具栏按钮
+        'toolbar_Custom': [
+            # 表情 代码块
+            ['Smiley', 'CodeSnippet'],
+            # 字体风格
+            ['Bold', 'Italic', 'Underline', 'RemoveFormat', 'Blockquote'],
+            # 字体颜色
+            ['TextColor', 'BGColor'],
+            # 链接
+            ['Link', 'Unlink'],
+            # 列表
+            ['NumberedList', 'BulletedList'],
+            # 最大化
+            ['Maximize']
+        ],
+        # 加入代码块插件
+        'extraPlugins': ','.join(['codesnippet','uploadimage','prism','widget','lineutils']),
+    },
 }
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -163,7 +197,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-LANGUAGE_CODE = 'zh-Hans'
+LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -181,4 +215,4 @@ STATIC_URL = '/statics/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'statics')
 ]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'statics')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

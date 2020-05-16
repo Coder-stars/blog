@@ -42,35 +42,40 @@
         </div>
         {# 文章详情内容 #}
         <div class="cont">
+        <p>
             {{ cont|safe }}
+        </p>
+
             <hr style="color: #989FA9">
             {#        评论 #}
              {% if request.session.user_name%}
-        <div>
-            <form action="{% url 'comment:post_comment' article_id %}" method="POST">
-                {% csrf_token %}
-                <div class="form-group">
-                    <label for="body">
-                        <strong>
-                            我也要发言：
-                        </strong>
-                    </label>
-                    <div>
-                    {{ comment_form.media }}
-                    {{ comment_form.body }}
-                    </div>
+                <div>
+                    <form action="{% url 'comment:post_comment' article_id %}" method="POST">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="body">
+                                <strong>
+                                    我也要发言：
+                                </strong>
+                                <div>
+                            {{ comment_form.media }}
+                            {{ comment_form.body }}
+                            </div>
+                            </label>
+
+                        </div>
+                        <!-- 提交按钮 -->
+                        <button type="submit" class="btn btn-primary ">发送</button>
+                    </form>
                 </div>
-                <!-- 提交按钮 -->
-                <button type="submit" class="btn btn-primary ">发送</button>
-            </form>
-        </div>
-        <br>
+                <br>
     {% else %}
-        <br>
-        <h5 class="row justify-content-center">
-            请<a href="/user/login/">登录</a>后回复
-        </h5>
-        <br>
+{#        <br>#}
+{#        <h5 class="row justify-content-center">#}
+{#            请<a href="/user/login/">登录</a>后回复#}
+{#        </h5>#}
+                 <h5> 请<a href="/user/login/">登录</a>后回复</h5>
+{#        <br>#}
     {% endif %}
         <!-- 显示评论 -->
             {% load mptt_tags %}
@@ -137,7 +142,7 @@
                                  aria-hidden="true"
                             >
                                 <div class="modal-dialog modal-dialog-centered" role="document">
-                                    <div class="modal-content" style="height: 320px">
+                                    <div class="modal-content" style="height: 380px">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalCenterTitle">回复&nbsp; {{ comment.user }}：</h5>
                                         </div>
@@ -182,6 +187,8 @@
                 'article_id':{{ article_id }},
                 'type':'zan',
             };
+            if (confirm("确定要点赞博文吗？")){
+
             $.ajax({
                     type : 'POST',
                     url: '/Article/zan_article/',
@@ -200,6 +207,7 @@
                 },
 
             );
+            }
         });
     $('#not_zan').click(function () {
             {# 实现倒彩并实现界面局部刷新 #}
@@ -238,7 +246,7 @@
                 '/' +
                 comment_id +
                 '"' +
-                ' frameborder="0" style="width: 100%; height: 100%;" id="iframe_' +
+                ' frameborder="0" style="width: 80%; height: 100%;" id="iframe_' +
                 comment_id +
                 '"></iframe>';
             $(modal_body).append(content);

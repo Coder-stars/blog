@@ -18,7 +18,7 @@ class Comment(MPTTModel):
         on_delete=models.CASCADE,
         related_name='comments'
     )
-    body = RichTextField()
+    body = RichTextField(config_name='comment')
     # body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     def __str__(self):

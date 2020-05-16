@@ -85,16 +85,18 @@
 
 <script>
     $('#search').click(function () {
-        content = $('#search_cont').val()
+        content = $('#search_cont').val();
+        {#alert(content);#}
         if(content){
             {#  拿到搜索内容去后端请求数据#}
             $.ajax({
-                url:'/search/',
+                url:'/search/?q='+content,
                 type:'get',
 
             }
-
             )
+                        window.location.href='/search/?q='+content
+
         }
         else {
             alert("搜索内容异常")

@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block article %} {% endblock article %}
 {% block search %}
  <div class="main_wrap clearfix">
     {% if query %}
@@ -7,9 +8,15 @@
      <ul class="goods_type_list clearfix">
     {% for result in page%}
         <li>
-
-            <h4><a href="{{ result.object.article_id }}">{{ result.object.article_title|safe }}</a></h4>
-            <div class="operate">
+                <h4>
+                    <b>
+                        <a href="{% url 'Article:a_id' result.object.article_id %}"
+                           style="color: black;"
+                        >
+                            {{ result.object.article_title|safe }}
+                        </a>
+                    </b>
+                </h4>            <div class="operate">
                 <p >
                     {{ result.object.article_content|slice:'100'|safe}}...
                 </p>
@@ -30,7 +37,7 @@
                 <span>
                         <i class="fas fa-clock" style="color: pink;"></i>
 
-                        作者:{{  result.object.session.user_name}}
+                        作者:{{  result.object.user}}
                     </span>
             </div>
         </li>

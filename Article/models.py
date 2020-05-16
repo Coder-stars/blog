@@ -1,6 +1,7 @@
 from django.db import models
 from tinymce.models import HTMLField
 from  ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.urls import reverse
 from blog_User.models import User_info
 from datetime import datetime
@@ -14,8 +15,9 @@ class Article(models.Model):
     article_title = models.CharField(max_length=200)  # 文章标题
     article_outline = models.CharField(max_length=2000)#文章概要
     # article_content = HTMLField()  # 文章正文
-    article_content = RichTextField()  # 文章正文
-    article_tag = models.CharField(max_length = 200 ) #python  django 文章类别
+    article_content = RichTextField(config_name='default')  # 文章正文
+    # article_content = RichTextUploadingField(default='',verbose_name='博文正文')  # 文章正文
+    article_tag = models.CharField(max_length=200 ) #python  django 文章类别
     create_time = models.DateTimeField(default=timezone.now())#创建时间
     update_time = models.DateTimeField(auto_now=True)#更新时间
     read_count = models.IntegerField(default=0 )#阅读量

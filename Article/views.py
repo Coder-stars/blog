@@ -17,19 +17,22 @@ from comment.forms import CommentForm
 def index(request):
     context = {}
     Artics = Article.objects.all().order_by('-Fabulous_count')#点赞量倒叙排名
-    # paginator = Paginator(Artics,2)#分页 每页10篇
-    paginator = Paginator(Artics,10)#分页 每页10篇
+    paginator = Paginator(Artics,2)#分页 每页10篇
+    # paginator = Paginator(Artics,10)#分页 每页10篇
     page = request.GET.get('page')#获取url中的页码
     articles = paginator.get_page(page)#获取对应页码返回
 
     context['articles'] = articles
-    return  render(request,'Article/index.html',context)
+    return render(request,'Article/index.html',context)
 
-
+from .forms import articleForm
 #新随笔
 @user_dectorator.login
 def newArticle(request):
-    return render(request,'Article/new_article.html')
+    context={}
+    aForm = articleForm()
+    context['articleForm'] = aForm
+    return render(request,'Article/new_article.html',context)
 
 
 @user_dectorator.login
@@ -42,7 +45,12 @@ def deal_article(request):
     if request.method == 'POST':
         article = dict()
         title = request.POST.get('title')
-        text = request.POST.get('comment_content')
+        article_form = articleForm(request.POST)
+        new_form = article_form.save(commit=False)
+        new_form.user_id = request.session['user_id']
+        new_form.save()
+        # print(new_form.article_content)
+        text = new_form.article_content
         tags = request.POST.get('tags')
         type = request.POST.get('type')
         article['article_title'] = title
@@ -61,6 +69,7 @@ def deal_article(request):
             traceback.print_exc()
             print("获取用户信息出错")
         try:
+            print(article)
             at = Article.objects.create(**article)
             print("文章保存成功")
             #返回概览视图或者用户中心
